@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+
+. test/test_helper.sh
+
+echo -n 'Reservoir sample... '
+r1=$(bin/reservoir_sample \
+  --fasta-file test/data/test.fasta \
+  --n-sequences 3 \
+  --output-fasta /dev/stdout \
+  --log /dev/null | grep -c '^>')
+
+
+should $r1 '3'
+
+echo -n 'Reservoir sample (paired)... '
+r2=$(bin/reservoir_sample \
+  --fasta-file test/data/test.fasta \
+  --n-sequences 1 \
+  --paired \
+  --output-fasta /dev/stdout \
+  --log /dev/null | grep -c '^>')
+
+should $r2 '2'
