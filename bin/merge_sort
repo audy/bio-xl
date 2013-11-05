@@ -77,7 +77,6 @@ def batch_sort(input, output, key=None, buffer_size=32000, tempdirs=None):
         with open(output, 'w') as output_file:
             output_file.writelines([ i.format('fasta') for i in merge(key, *chunks) ])
     finally:
-        print 'closing %s buffers'
         for chunk in chunks:
             try:
                 chunk.close()
