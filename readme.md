@@ -7,7 +7,7 @@ will try to stick to Python and C.
 
 ### `bin/merge_sort`
 
-disk-based sorting of sequences based on an arbitrary attribute.
+Disk-based sorting of sequences based on an arbitrary attribute.
 
 ### `bin/reservoir_sample`
 
