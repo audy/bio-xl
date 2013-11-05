@@ -2,6 +2,16 @@
 
 Collection of scripts for dealing with large collections of sequences.
 
+## Tools
+
+### `bin/merge_sort`
+
+disk-based sorting of sequences based on an arbitrary attribute.
+
+### `bin/reservoir_sample`
+
+Randomly sample from a very large (or infinite) stream of sequences.
+
 ## License
 
 The MIT License (MIT)
