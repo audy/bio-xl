@@ -1,6 +1,7 @@
 # BioXL
 
-Collection of scripts for dealing with large collections of sequences.
+Collection of scripts for dealing with large collections of sequences. I
+will try to stick to Python and C.
 
 ## Tools
 
@@ -11,6 +12,19 @@ disk-based sorting of sequences based on an arbitrary attribute.
 ### `bin/reservoir_sample`
 
 Randomly sample from a very large (or infinite) stream of sequences.
+
+## Installation
+
+```bash
+$ cat requirements.txt
+numpy==1.8.0
+biopython==1.61
+
+$ (sudo) pip install -r requirements.txt
+...
+
+$ ./run_tests
+```
 
 ## License
 
