@@ -2,10 +2,10 @@
 
 set -e
 
-. test/test_helper.sh
+. "test/test-helper.sh"
 
 echo -n 'Reservoir sample... '
-r1=$(bin/reservoir_sample \
+r1=$(bin/reservoir-sample \
   --fasta-file test/data/test.fasta \
   --n-sequences 3 \
   --output-fasta /dev/stdout \
@@ -15,7 +15,7 @@ r1=$(bin/reservoir_sample \
 should $r1 '3'
 
 echo -n 'Reservoir sample (paired)... '
-r2=$(bin/reservoir_sample \
+r2=$(bin/reservoir-sample \
   --fasta-file test/data/test.fasta \
   --n-sequences 1 \
   --paired \
